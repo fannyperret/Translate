@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Translate</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ translate.id }}</td>
+            </tr>
+            <tr>
+                <th>Mum</th>
+                <td>{{ translate.mum }}</td>
+            </tr>
+            <tr>
+                <th>Dad</th>
+                <td>{{ translate.dad }}</td>
+            </tr>
+            <tr>
+                <th>Brother</th>
+                <td>{{ translate.brother }}</td>
+            </tr>
+            <tr>
+                <th>Sister</th>
+                <td>{{ translate.sister }}</td>
+            </tr>
+            <tr>
+                <th>Dog</th>
+                <td>{{ translate.dog }}</td>
+            </tr>
+            <tr>
+                <th>Cat</th>
+                <td>{{ translate.cat }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('translate_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('translate_edit', { 'id': translate.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}
