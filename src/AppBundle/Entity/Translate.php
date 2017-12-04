@@ -119,6 +119,7 @@ class Translate
      */
     public function getDad()
     {
+        $translated = $this->get('translator')->trans('Papa');
         return $this->dad;
     }
 
